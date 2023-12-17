@@ -9,6 +9,8 @@
  * ! PUBLIC ROUTES
  */
 export const PUBLIC_PATH = "/";
+export const ECOLES_PATH = "/ecoles";
+export const DIPLOME_PATH = "/diplomes";
 export const LOGIN_PATH = "login";
 export const REGISTER_PATH = "signup";
 export const FORGETPASSWORD = "/auth/forgetPassword";

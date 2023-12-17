@@ -28,7 +28,6 @@ function Button({
         justifyContent: "center",
         // width: "100%",
         // backgroundColor: bgColor ?? "#fff",
-        height: height ?? 40,
         overflow: "hidden",
         cursor: "pointer",
         // color: color ?? "black",
@@ -37,7 +36,7 @@ function Button({
       }}
       onClick={onClick}
       disabled={loading}
-      className={`${className} rounded-full py-6 active:scale-95 transition-all px-6 font-medium`}
+      className={`${className} rounded-full py-6 active:scale-95 transition-all px-6 font-medium h-11`}
     >
       {loading ? (
         <div>loading...</div>

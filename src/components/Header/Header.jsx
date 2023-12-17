@@ -2,10 +2,11 @@
 import React from "react"
 import HeaderItem from "./HeaderItem"
 import BlackLogo from "components/Logo/BlackLogo"
+import { DIPLOME_PATH, ECOLES_PATH } from "routes/navigation/navigationPaths"
 
 const Header = () => {
     return (
-        <header className="bg-white sticky top-0 z-10">
+        <header className="bg-white sticky top-0 z-10 shadow-md">
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="md:flex md:items-center md:gap-12">
@@ -15,9 +16,9 @@ const Header = () => {
                     <div className="hidden md:block">
                         <nav aria-label="Global">
                             <ul className="flex items-center gap-6 text-sm">
-                                <HeaderItem>Acceuil</HeaderItem>
-                                <HeaderItem>Ecoles</HeaderItem>
-                                <HeaderItem>Diplômes</HeaderItem>
+                                <HeaderItem to={""}>Acceuil</HeaderItem>
+                                <HeaderItem to={ECOLES_PATH}>Ecoles</HeaderItem>
+                                <HeaderItem to={DIPLOME_PATH}>Diplômes</HeaderItem>
                             </ul>
                         </nav>
                     </div>

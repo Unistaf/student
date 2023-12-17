@@ -27,12 +27,10 @@ import { twMerge } from "tailwind-merge";
  * @returns
  */
 
-const Label = styled.label`
-  display: flex;
+const Label = styled.div`
+  // display: flex;
   align-items: center;
-  width: 100%;
   position: relative;
-  margin: 0.5rem 0;
 `
 const InputForm = styled.input`
   width: 100%;
@@ -52,10 +50,12 @@ function Input({
   icon,
   extraOptions,
   name,
+  placeholder,
   extraClasse
 }) {
   return (
     <Label>
+      <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{label}</label>
       <IconContainer>
         {icon && (
           <icon.name
@@ -66,8 +66,8 @@ function Input({
         )}
       </IconContainer>
       <InputForm
-        className={twMerge("border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-5 min-w-max", extraClasse)}
-        placeholder={label}
+        className={twMerge("border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-2 min-w-max h-11", extraClasse)}
+        placeholder={placeholder}
         type={type ?? "text"}
         value={value}
         onChange={(e) => onChange(e.target.value, name)}

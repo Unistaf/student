@@ -9,7 +9,7 @@ import Input from "components/Input"
 
 const Footer = () => {
     return (
-        <footer className="bg-blueTercary">
+        <footer className="bg-blueTercary mt-[100px]">
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                 <div
                     style={{ marginTop: "-130px" }}
