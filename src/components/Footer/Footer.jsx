@@ -24,14 +24,14 @@ const Footer = () => {
                             />
                         </div>
                         <Button
-                            title={"S'iscrire"}
+                            title={"S'inscrire"}
                             icon={{
                                 name: HiArrowRight,
                                 position: "right",
                                 color: "#FFF",
                                 size: 20
                             }}
-                            className="text-white border border-white bg-blue text-indigo-600 hover:bg-blueSecondary hover:text-white focus:outline-none focus:ring w-40 min-w-max"
+                            className="text-white border border-white bg-blue hover:bg-blueSecondary hover:text-white focus:outline-none h-11 px-5"
                         />
                     </div>
                 </div>
@@ -63,10 +63,14 @@ const Footer = () => {
                         <p className="text-lg font-medium text-gray-900">Nous contacter</p>
 
                         <form>
-                            <Input extraClasse={"bg-inputBg"} />
-                            <textarea className="w-full"></textarea>
+                            <Input
+                                label={"Nom de l'établissement"}
+                                placeholder={"Rechercher"}
+                                extraClasse={"bg-none border-blue"}
+                            />
+                            {/* <textarea className="w-full"></textarea> */}
                             <div className="flex justify-end">
-                                <Button title={"Envoyer"} className="bg-white text-blue py-2" />
+                                <Button title={"Envoyer"} className="bg-white text-blue px-5 h-10 mt-2" />
                             </div>
                         </form>
                     </div>

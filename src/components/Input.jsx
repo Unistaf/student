@@ -66,7 +66,7 @@ function Input({
         )}
       </IconContainer>
       <InputForm
-        className={twMerge("border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 px-2 min-w-max h-11", extraClasse)}
+        className={twMerge(["border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block min-w-max", extraClasse])}
         placeholder={placeholder}
         type={type ?? "text"}
         value={value}

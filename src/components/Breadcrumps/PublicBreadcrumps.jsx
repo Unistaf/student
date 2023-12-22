@@ -15,7 +15,7 @@ const PublicBreadcrumps = () => {
     return (
         <div className="h-50 bg-blue">
             <AppMaxWidth>
-                tetste
+                <span className="text-white">BreadCrumb goes here</span>
                 <ol className="flex gap-9">
                     {crumbs.map((crumb, index) => (
                         <li key={index}>{crumb}</li>

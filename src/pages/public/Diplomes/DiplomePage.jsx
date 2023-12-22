@@ -37,7 +37,7 @@ const DiplomePage = () => {
                             color: "#FFF"
                         }}
                         title={"Rechercher"}
-                        className="bg-blue text-white w-50"
+                        className="bg-blue text-white h-11 px-5"
                     />
                 </form>
             </div>

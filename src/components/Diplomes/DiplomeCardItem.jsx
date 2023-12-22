@@ -14,7 +14,7 @@ const DiplomeSpec = ({ label, desc }) => {
 
 const DiplomeCardItem = () => {
     return (
-        <div className="flex flex-col gap-5 items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 px-5">
+        <div className="flex flex-col gap-5 shadow-xl items-center bg-white rounded-lg md:flex-row hover:bg-gray-100 px-5">
             <img
                 className="object-contain w-full rounded-t-lg h-96 md:h-auto md:w-32 md:rounded-none md:rounded-s-lg"
                 src={unistafBlack}
@@ -53,7 +53,7 @@ const DiplomeCardItem = () => {
                             label={"Dakar"}
                         />
                     </div>
-                    <Button className={"border border-blueSecondary text-blue"} title={"Candidater"} />
+                    <Button className={"border border-blueSecondary text-blue h-9 text-sm"} title={"Candidater"} />
                 </div>
             </div>
         </div>

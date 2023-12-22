@@ -1,4 +1,5 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 // eslint-disable-next-line valid-jsdoc
 /**
@@ -23,9 +24,6 @@ function Button({
     <button
       style={{
         border: "1px solid " + bgColor,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         // width: "100%",
         // backgroundColor: bgColor ?? "#fff",
         overflow: "hidden",
@@ -36,7 +34,7 @@ function Button({
       }}
       onClick={onClick}
       disabled={loading}
-      className={`${className} rounded-full py-6 active:scale-95 transition-all px-6 font-medium h-11`}
+      className={twMerge(["flex items-center justify-center rounded-full active:scale-95 transition-all px-3 font-medium w-max", className])}
     >
       {loading ? (
         <div>loading...</div>

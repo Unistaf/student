@@ -16,18 +16,18 @@ const Banner = () => {
                         Avec notre Unistaf, trouvez les écoles habilitées et les diplômes accréditées au Sénégal !
                     </p>
 
-                    <div className="flex flex-wrap gap-3 justify-between mt-10">
+                    <div className="flex flex-wrap gap-3 mt-10">
                         <Button
                             icon={{
                                 name: MdOutlineSchool,
                                 color: "#fff",
                                 size: 25
                             }}
-                            className="bg-blueSecondary text-white flex-1 min-w-max"
+                            className="bg-blueSecondary text-center text-white flex-auto h-11"
                             title={"Trouver une école"}
                         />
                         <Button
-                            className="bg-white text-blueSecondary flex-1 min-w-max"
+                            className="bg-white text-blueSecondary text-center flex-auto h-11"
                             title={"Trouver un diplôme"}
                             icon={{
                                 name: MdOutlineSchool,
