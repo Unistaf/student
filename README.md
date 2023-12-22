@@ -1,6 +1,3 @@
-<div align="center">
-![RED Team](https://media.discordapp.net/attachments/1003601969463705691/1061686166941872128/dessin.png?width=591&height=595)
-</div>
 
 # Demarer avec le projet
 - Installer env-cmd
