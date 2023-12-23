@@ -1,26 +1,27 @@
 import AppMaxWidth from "components/AppMaxWidth/AppMaxWidth";
 import React from "react"
-import { useMatches } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { publicRoutes } from "routes/navigation/navigationRoutes/public";
+import useReactRouterBreadcrumbs from "use-react-router-breadcrumbs";
 
 const PublicBreadcrumps = () => {
-    const matches = useMatches();
-    const crumbs = matches
-        // first get rid of any matches that don't have handle and crumb
-        .filter((match) => Boolean(match.handle?.crumb))
-        // now map them into an array of elements, passing the loader
-        // data to each one
-        .map((match) => match.handle.crumb(match.data));
-    console.log({ crumbs });
+    const breadcrumbs = useReactRouterBreadcrumbs(publicRoutes);
 
     return (
         <div className="h-50 bg-blue">
             <AppMaxWidth>
-                <span className="text-white">BreadCrumb goes here</span>
-                <ol className="flex gap-9">
-                    {crumbs.map((crumb, index) => (
-                        <li key={index}>{crumb}</li>
+                <ul className="flex gap-5">
+                    {breadcrumbs.map(({ match, breadcrumb }, index) => (
+                        <NavLink
+                            // className="text-white font-semibold"
+                            className={(index === breadcrumbs.length - 1 ? "text-white font-medium" : "text-white font-bold")}
+                            key={match.pathname}
+                            to={match.pathname}
+                        >
+                            {breadcrumb}
+                        </NavLink>
                     ))}
-                </ol>
+                </ul>
             </AppMaxWidth>
         </div>
     );

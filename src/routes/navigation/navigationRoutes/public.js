@@ -31,6 +31,7 @@ export const publicRoutes = [
                 </>,
                 children: [
                     {
+                        breadcrumb: "Acceuil",
                         path: "",
                         element: <PublicHomePage />,
                     },
@@ -39,6 +40,7 @@ export const publicRoutes = [
                         element: <EcolePage />
                     },
                     {
+                        breadcrumb: "Diplômes",
                         path: DIPLOME_PATH,
                         element: <DiplomePage />
                     }
