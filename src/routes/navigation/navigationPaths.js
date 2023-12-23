@@ -10,6 +10,7 @@
  */
 export const PUBLIC_PATH = "/";
 export const ECOLES_PATH = "/ecoles";
+export const ECOLES_DETAILS_PATH = ":ecole";
 export const DIPLOME_PATH = "/diplomes";
 export const LOGIN_PATH = "login";
 export const REGISTER_PATH = "signup";

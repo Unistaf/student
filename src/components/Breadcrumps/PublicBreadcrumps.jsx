@@ -8,19 +8,22 @@ const PublicBreadcrumps = () => {
     const breadcrumbs = useReactRouterBreadcrumbs(publicRoutes);
 
     return (
-        <div className="h-50 bg-blue">
+        <div className="h-50">
             <AppMaxWidth>
-                <ul className="flex gap-5">
-                    {breadcrumbs.map(({ match, breadcrumb }, index) => (
-                        <NavLink
-                            // className="text-white font-semibold"
-                            className={(index === breadcrumbs.length - 1 ? "text-white font-medium" : "text-white font-bold")}
-                            key={match.pathname}
-                            to={match.pathname}
-                        >
-                            {breadcrumb}
-                        </NavLink>
-                    ))}
+                <ul className="flex">
+                    {
+                        breadcrumbs.map(({ match, breadcrumb }, index) => (
+                            <NavLink
+                                // className="text-white font-semibold"
+                                className={(index === breadcrumbs.length - 1 ? "text-white font-medium" : "text-white font-bold")}
+                                key={match.pathname}
+                                to={match.pathname}
+                            >
+                                {breadcrumb}
+                                <span className="mx-2">{index === breadcrumbs.length - 1 ? "" : ">"}</span>
+                            </NavLink>
+                        ))
+                    }
                 </ul>
             </AppMaxWidth>
         </div>

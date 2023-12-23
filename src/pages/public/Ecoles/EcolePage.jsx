@@ -11,7 +11,9 @@ import { HiSearch } from "react-icons/hi"
 const EcolePage = () => {
     return (
         <div>
-            <PublicBreadcrumps />
+            <div className="bg-blue">
+                <PublicBreadcrumps />
+            </div>
             <AppMaxWidth>
                 <h1 className="text-4xl font-bold">Liste des établissements</h1>
                 <div>
