@@ -7,8 +7,10 @@ import Select from "components/Select"
 import React from "react"
 import GridList from "react-flexible-list"
 import { HiSearch } from "react-icons/hi"
+import { useNavigate } from "react-router-dom"
 
 const EcolePage = () => {
+    const navigate = useNavigate()
     return (
         <div>
             <div className="bg-blue">
@@ -54,7 +56,7 @@ const EcolePage = () => {
                 <div className="mt-10">
                     <GridList
                         resourceData={[1, 2, 3, 4, 5, 6, 7]}
-                        resourceItem={(item) => <EcoleCardItem />}
+                        resourceItem={(item) => <EcoleCardItem onClick={() => navigate("Bakeli")} />}
                         cardWidth={400}
                     />
                 </div>
