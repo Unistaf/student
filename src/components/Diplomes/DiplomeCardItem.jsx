@@ -8,26 +8,29 @@ import Button from "components/Button";
 
 const DiplomeSpec = ({ label, desc }) => {
     return <p className="d-flex text-sm">
-        <span className="text-tercary">{label}</span> : <span className="font-medium">{desc}</span>
+        <span className="text-tercary">{label} : </span> <span className="font-medium">{desc}</span>
     </p>
 }
 
-const DiplomeCardItem = () => {
+const DiplomeCardItem = ({ isImage }) => {
     return (
-        <div className="flex flex-col gap-5 shadow-xl items-center bg-white rounded-lg md:flex-row hover:bg-gray-100 px-5">
-            <img
-                className="object-contain w-full rounded-t-lg h-96 md:h-auto md:w-32 md:rounded-none md:rounded-s-lg"
-                src={unistafBlack}
-                alt="Unistaf"
-            />
+        <div className="flex flex-col flex-1 min-w-[420px] gap-5 shadow-xl items-center bg-white rounded-lg md:flex-row hover:bg-gray-100 px-5">
+            {
+                isImage && <img
+                    className="object-contain w-full rounded-t-lg h-96 md:h-auto md:w-32 md:rounded-none md:rounded-s-lg"
+                    src={unistafBlack}
+                    alt="Unistaf"
+                />
+            }
             <div className="flex flex-col flex-1 justify-between p-4 leading-normal">
                 <div className="flex items-center gap-3">
                     <h5
-                        className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                         Licence informatique et gestion
                     </h5>
-                    {"-"}
-                    <span className="text-tercary font-semibold">UNISTAF</span>
+                    {
+                        isImage && <span className="text-tercary font-semibold"> - UNISTAF</span>
+                    }
                 </div>
                 <div className="flex flex-col gap-2 py-3 md:flex-row md:gap-10">
                     <DiplomeSpec label={"Domaine"} desc={"Sciences politiques"} />

@@ -11,9 +11,9 @@ const EcoleCardItem = () => {
                 alt=""
             />
             <div className="flex flex-col flex-1 justify-between p-4 leading-normal">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Unistaf School</h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Année d’habilitation : 2012</p>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Localisation: HLM Grand yoff</p>
+                <h5 className="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Unistaf School</h5>
+                <p className="mb-3 font-normal text-sm text-gray-700">Année d’habilitation : 2012</p>
+                <p className="mb-3 font-normal text-sm text-gray-700">Localisation: HLM Grand yoff</p>
                 <Button
                     title={"Voir plus"}
                     // className="bg-transparent border rounded-full w-40 h-5 border-blue text-blue py-2"

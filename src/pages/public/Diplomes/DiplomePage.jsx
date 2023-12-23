@@ -1,7 +1,7 @@
 import AppMaxWidth from "components/AppMaxWidth/AppMaxWidth"
 import PublicBreadcrumps from "components/Breadcrumps/PublicBreadcrumps"
 import Button from "components/Button"
-import DiplomeCardItem from "components/Diplomes/DiplomeCardItem"
+import DiplomeList from "components/Diplomes/DiplomeList"
 import Input from "components/Input"
 import Select from "components/Select"
 import React from "react"
@@ -9,7 +9,9 @@ import { HiSearch } from "react-icons/hi"
 
 const DiplomePage = () => {
     return <div>
-        <PublicBreadcrumps />
+        <div className="bg-blue">
+            <PublicBreadcrumps />
+        </div>
         <AppMaxWidth>
             <h1 className="text-4xl font-bold">Trouver un diplôme</h1>
             <p className="mt-3">
@@ -57,15 +59,7 @@ const DiplomePage = () => {
                 </form>
             </div>
             <p className="mt-10 text-xl font-medium mb-5">Des diplômes accréditées qui pourront vous intéresser </p>
-            {
-                <div className="flex flex-col gap-5">
-                    {
-                        [1, 2, 3, 4, 5, 6, 7, 8].map((index) => {
-                            return <DiplomeCardItem key={index} />
-                        })
-                    }
-                </div>
-            }
+            <DiplomeList isImage={true} className="flex-col" />
         </AppMaxWidth>
     </div>
 }

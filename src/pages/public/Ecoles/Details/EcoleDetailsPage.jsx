@@ -5,6 +5,8 @@ import bgImage from "assets/imgs/ecoleDetails.png"
 import AppMaxWidth from "components/AppMaxWidth/AppMaxWidth"
 import Presentation from "components/Ecoles/Presentation"
 import EcoleInfo from "components/Ecoles/EcoleInfo"
+import DiplomeList from "components/Diplomes/DiplomeList"
+import ContactEcole from "components/Ecoles/ContactEcole"
 
 const EcoleDetailsPage = () => {
     return (
@@ -20,12 +22,21 @@ const EcoleDetailsPage = () => {
                     <h1 className="text-3xl font-bold">Unistaf school academy</h1>
                 </div>
                 <div className="flex my-10 gap-5">
-                    <div className="flex-1 bg-white p-5 shadow-lg rounded-lg">
+                    <div className="flex-auto bg-white p-5 shadow-lg rounded-lg">
                         <Presentation />
                     </div>
-                    <div>
-                        <EcoleInfo />
+                    <div className="flex-auto">
+                        <div className="mb-3">
+                            <EcoleInfo />
+                        </div>
+                        <div className="mt-5">
+                            <ContactEcole />
+                        </div>
                     </div>
+                </div>
+                <div className="mt-5">
+                    <h2>Diplômes accrédités</h2>
+                    <DiplomeList className={"flex-row flex-wrap"} />
                 </div>
             </AppMaxWidth>
         </div>
