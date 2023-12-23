@@ -6,7 +6,7 @@ const UnistafSection = ({ description }) => {
     return (
         <Section>
             <SectionTitle title={"Unistaf"} />
-            <p className="my-10 text-xl max-w-screen-md	 m-auto text-center">
+            <p className="my-10 text-md md:text-xl max-w-screen-md	 m-auto text-center">
                 {description}
             </p>
         </Section>

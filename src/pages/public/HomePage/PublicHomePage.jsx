@@ -13,7 +13,7 @@ const PublicHomePage = () => {
             <Banner />
             <Section>
                 <SectionTitle title={"L’orientation pas à pas avec UNISTAF"} />
-                <div className="grid grid-cols-3 gap-4 px-10 mt-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-16 px-10 mt-20">
                     <CardSection
                         number={1}
                         className={"bg-orange"}

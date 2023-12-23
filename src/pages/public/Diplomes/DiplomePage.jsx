@@ -21,24 +21,39 @@ const DiplomePage = () => {
             <p className="mt-5">
                 <strong>*Bon à savoir</strong> : La durée de validité d'un programme (ou diplôme) de formation est de <strong>5 ans.</strong>
             </p>
-            <div>
-                <form className="grid grid-cols-4 gap-5 items-end mt-5">
-                    <Input label={"Nom de l'établissement"} placeholder={"Rechercher"} extraClasse={"bg-transparent border-blue"} />
-                    <Select label={"Type d'établissement"} extraClasse={"bg-transparent border-blue"}>
-                        <option>Type d'établissement</option>
-                    </Select>
-                    <Select label={"Lieu"} extraClasse={"bg-transparent border-blue"}>
-                        <option>Lieu</option>
-                    </Select>
-                    <Button
-                        icon={{
-                            name: HiSearch,
-                            size: 20,
-                            color: "#FFF"
-                        }}
-                        title={"Rechercher"}
-                        className="bg-blue text-white h-11 px-5"
-                    />
+            <div className="my-10">
+                <form>
+                    <div className="flex flex-wrap gap-5 items-end mt-5">
+                        <Input
+                            label={"Nom de l'établissement"}
+                            placeholder={"Rechercher"}
+                            extraClasse={"bg-transparent border-blue"}
+                            inputContainerClass={"flex-1 min-w-fit"}
+                        />
+                        <Select
+                            label={"Type d'établissement"}
+                            extraClasse={"bg-transparent border-blue"}
+                            containerClasse={"flex-1 min-w-fit"}
+                        >
+                            <option>Type d'établissement</option>
+                        </Select>
+                        <Select
+                            label={"Lieu"}
+                            extraClasse={"bg-transparent border-blue"}
+                            containerClasse={"flex-1 min-w-fit"}
+                        >
+                            <option>Lieu</option>
+                        </Select>
+                        <Button
+                            icon={{
+                                name: HiSearch,
+                                size: 20,
+                                color: "#FFF"
+                            }}
+                            title={"Rechercher"}
+                            className="bg-blue text-white h-11 px-5 min-w-12"
+                        />
+                    </div>
                 </form>
             </div>
             <p className="mt-10 text-xl font-medium mb-5">Des diplômes accréditées qui pourront vous intéresser </p>

@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                 <div
                     style={{ marginTop: "-130px" }}
-                    className="flex flex-wrap items-center gap-10 rounded-lg bg-white p-6 drop-shadow-2xl sm:flex-row sm:justify-between"
+                    className="flex flex-col flex-wrap items-center gap-10 rounded-lg bg-white p-6 drop-shadow-2xl sm:flex-row sm:justify-between"
                 >
                     <strong className="text-xl sm:text-xl flex-1 sm:min-w-max"> Restez informés des mises à jour! </strong>
 
@@ -36,7 +36,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-white">
+                <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 text-white">
                     <div className="">
                         <div className="text-lg font-medium text-gray-900">
                             <img src={whiteLogo} alt="" />

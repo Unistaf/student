@@ -34,7 +34,6 @@ const Label = styled.div`
 `
 const InputForm = styled.input`
   width: 100%;
-  padding: 0.8rem 2.5rem 0.8rem;
 `
 const IconContainer = styled.span`
   position: absolute;
@@ -51,10 +50,11 @@ function Input({
   extraOptions,
   name,
   placeholder,
-  extraClasse
+  extraClasse,
+  inputContainerClass
 }) {
   return (
-    <Label>
+    <Label className={twMerge([inputContainerClass])}>
       <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{label}</label>
       <IconContainer>
         {icon && (
@@ -66,7 +66,7 @@ function Input({
         )}
       </IconContainer>
       <InputForm
-        className={twMerge(["border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block min-w-max", extraClasse])}
+        className={twMerge(["border px-4 border-gray-300 h-11 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block min-w-max", extraClasse])}
         placeholder={placeholder}
         type={type ?? "text"}
         value={value}
