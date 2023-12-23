@@ -3,7 +3,7 @@ import React from "react"
 const Presentation = () => {
     return (
         <div>
-            <h1 className="text-4xl font-bold">Présentation</h1>
+            <h1 className="text-xl md:text-4xl font-bold mb-5">Présentation</h1>
             <p className="text-sm">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin a,
                 arcu sem eu risus. Tempus, dui ultricies donec auctor id et. Diam nibh dignissim

@@ -14,7 +14,7 @@ const DiplomeSpec = ({ label, desc }) => {
 
 const DiplomeCardItem = ({ isImage }) => {
     return (
-        <div className="flex flex-col flex-1 min-w-[420px] gap-5 shadow-xl items-center bg-white rounded-lg md:flex-row hover:bg-gray-100 px-5">
+        <div className="flex flex-col flex-1 min-w-[320px] gap-5 shadow-xl items-cente bg-white rounded-lg md:flex-row hover:bg-gray-100 px-5">
             {
                 isImage && <img
                     className="object-contain w-full rounded-t-lg h-96 md:h-auto md:w-32 md:rounded-none md:rounded-s-lg"
@@ -37,7 +37,7 @@ const DiplomeCardItem = ({ isImage }) => {
                     <DiplomeSpec label={"Formation"} desc={"Privée"} />
                     <DiplomeSpec label={"Accréditation"} desc={"Anaqsup"} />
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex flex-wrap gap-4 justify-between items-center">
                     <div className="flex gap-5">
                         <BadgeIcon
                             className={"bg-blueRgba text-blue text-xs"}
