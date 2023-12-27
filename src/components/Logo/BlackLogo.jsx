@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const BlackLogo = () => {
     return (
         <Link className="block text-teal-600" href="/">
-            <img src={blackLogo} alt="Unistaf" className="w-20" />
+            <img src={blackLogo} alt="Unistaf" className="w-32" />
         </Link>
     )
 }

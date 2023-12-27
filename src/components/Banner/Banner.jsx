@@ -42,7 +42,7 @@ const Banner = () => {
             <img
                 alt="Violin"
                 src="https://images.unsplash.com/photo-1484959014842-cd1d967a39cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                className="hidden md:block h-full w-full object-cover sm:self-end sm:rounded-ss-[30px] md:rounded-ss-[60px]"
+                className="hidden md:block h-[400px] w-full object-cover sm:self-end sm:rounded-ss-[30px] md:rounded-ss-[60px] md:rounded-br-[60px] rounded-md"
             />
         </section>
     )
