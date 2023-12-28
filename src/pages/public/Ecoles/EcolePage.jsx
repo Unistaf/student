@@ -17,7 +17,7 @@ const EcolePage = () => {
                 <PublicBreadcrumps />
             </div>
             <AppMaxWidth>
-                <h1 className="text-4xl font-bold">Liste des établissements</h1>
+                <h1 className="text-5xl font-bold">Liste des établissements</h1>
                 <div>
                     <form>
                         <div className="flex flex-wrap gap-5 items-end mt-5">
@@ -33,6 +33,8 @@ const EcolePage = () => {
                                 containerClasse={"flex-1 min-w-fit"}
                             >
                                 <option>Type d'établissement</option>
+                                <option>Public</option>
+                                <option>Privé</option>
                             </Select>
                             <Select
                                 label={"Lieu"}

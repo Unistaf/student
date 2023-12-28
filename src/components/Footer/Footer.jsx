@@ -49,11 +49,11 @@ const Footer = () => {
                         <p className="text-lg font-medium text-gray-900">Coordonnées</p>
 
                         <ul className="mt-8 space-y-4 text-sm">
-                            <li className="flex items-center gap-3 text-xl">
+                            <li className="flex items-center gap-3 text-lg">
                                 <HiPhone /> <span>+221770000000</span>
                             </li>
 
-                            <li className="flex items-center gap-3 text-xl">
+                            <li className="flex items-center gap-3 text-lg">
                                 <MdEmail /> <span>contact@unistaf.com</span>
                             </li>
                         </ul>
@@ -64,13 +64,12 @@ const Footer = () => {
 
                         <form>
                             <Input
-                                label={"Nom de l'établissement"}
                                 placeholder={"Rechercher"}
-                                extraClasse={"bg-none border-blue"}
+                                extraClasse={"bg-inputbg border-blue"}
                             />
-                            {/* <textarea className="w-full"></textarea> */}
+                            <textarea rows={5} className="w-full bg-inputbg rounded-2xl mt-3 p-3.5 placeholder:text-sm" placeholder="Message"></textarea>
                             <div className="flex justify-end">
-                                <Button title={"Envoyer"} className="bg-white text-blue px-5 h-10 mt-2" />
+                                <Button title={"Envoyer"} className="bg-white text-black px-5 h-10 mt-2 uppercase" />
                             </div>
                         </form>
                     </div>

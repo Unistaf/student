@@ -13,7 +13,7 @@ const DiplomePage = () => {
             <PublicBreadcrumps />
         </div>
         <AppMaxWidth>
-            <h1 className="text-4xl font-bold">Trouver un diplôme</h1>
+            <h1 className="text-5xl font-bold">Trouver un diplôme</h1>
             <p className="mt-3">
                 Un programme de formation accrédité est avant tout soumis à un
                 processus d'évaluation et d'examen qui permet de garantir que ledit

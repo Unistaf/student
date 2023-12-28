@@ -8,7 +8,7 @@ import Button from "components/Button";
 
 const DiplomeSpec = ({ label, desc }) => {
     return <p className="d-flex text-sm">
-        <span className="text-tercary">{label} : </span> <span className="font-medium">{desc}</span>
+        <span className="text-tercary">{label} : </span> <span className="font-bold">{desc}</span>
     </p>
 }
 

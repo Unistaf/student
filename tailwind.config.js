@@ -10,6 +10,7 @@ module.exports = {
       blueRgba: "rgba(13, 13, 163, 0.06)",
       blueTercary: "#0F0F68",
       white: "#FFFFFF",
+      black: "#000000",
       blackSecondary: "#333333",
       orange: "#FFB24B",
       green: "#11CA92",
