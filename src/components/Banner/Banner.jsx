@@ -2,6 +2,7 @@ import Button from "components/Button"
 import React from "react"
 
 import { MdOutlineSchool } from "react-icons/md";
+import imgBanner from "assets/imgs/hero-image.png"
 
 const Banner = () => {
     return (
@@ -18,17 +19,8 @@ const Banner = () => {
 
                     <div className="flex flex-wrap gap-3 mt-10">
                         <Button
-                            icon={{
-                                name: MdOutlineSchool,
-                                color: "#fff",
-                                size: 25
-                            }}
-                            className="bg-blueSecondary text-center text-white flex-auto h-11"
-                            title={"Trouver une école"}
-                        />
-                        <Button
-                            className="bg-white text-blueSecondary text-center flex-auto h-11"
-                            title={"Trouver un diplôme"}
+                            className="bg-white text-blueSecondary text-center h-11 px-10"
+                            title={"Trouver une formation"}
                             icon={{
                                 name: MdOutlineSchool,
                                 color: "rgba(75, 75, 239, 1)",
@@ -41,7 +33,7 @@ const Banner = () => {
 
             <img
                 alt="Violin"
-                src="https://images.unsplash.com/photo-1484959014842-cd1d967a39cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                src={imgBanner}
                 className="hidden md:block h-[400px] w-full object-cover sm:self-end sm:rounded-ss-[30px] md:rounded-ss-[60px] md:rounded-br-[60px] rounded-md"
             />
         </section>

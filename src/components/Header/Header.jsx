@@ -1,8 +1,11 @@
 /* eslint-disable max-len */
 import React from "react"
+
 import HeaderItem from "./HeaderItem"
 import BlackLogo from "components/Logo/BlackLogo"
 import { DIPLOME_PATH, ECOLES_PATH } from "routes/navigation/navigationPaths"
+import Button from "components/Button"
+import { MdOutlineSchool } from "react-icons/md"
 
 const Header = () => {
     return (
@@ -24,9 +27,18 @@ const Header = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
+                        <Button
+                            icon={{
+                                name: MdOutlineSchool,
+                                color: "rgba(17, 17, 167)",
+                                size: 25
+                            }}
+                            className="bg-white text-center font-semibold text-blue flex-auto h-11 shadow-xl px-9"
+                            title={"Trouver une formation"}
+                        />
                         <div className="sm:flex sm:gap-4">
                             <a
-                                className="rounded-full bg-teal-600 px-5 py-2.5 text-sm font-medium bg-blue text-white shadow"
+                                className="rounded-full font-semibold bg-teal-600 px-5 py-2.5 text-sm bg-blue text-white shadow"
                                 href="/"
                             >
                                 Nous contacter
