@@ -1,15 +1,16 @@
 import React from "react"
+import { MdOutlineSchool } from "react-icons/md"
 
 import AppMaxWidth from "components/AppMaxWidth/AppMaxWidth"
 import Button from "components/Button"
-import { MdOutlineSchool } from "react-icons/md"
+import imgPrepare from "assets/imgs/preparez-vous.png"
 
 const TrouverMaVoie = () => {
     return (
         <AppMaxWidth>
             <div className="grid grid-cols-2 px-10">
                 <div>
-                    <img src="" alt="Projet professionnel" />
+                    <img src={imgPrepare} alt="Projet professionnel" />
                 </div>
                 <div>
                     <h3
