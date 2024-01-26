@@ -12,6 +12,7 @@ export const PUBLIC_PATH = "/";
 export const ECOLES_PATH = "/etablissement";
 export const ECOLES_DETAILS_PATH = ":ecole";
 export const DIPLOME_PATH = "/diplomes";
+export const TROUVER_FORMATION_PATH = "/trouver-ma-formation";
 export const LOGIN_PATH = "login";
 export const REGISTER_PATH = "signup";
 export const FORGETPASSWORD = "/auth/forgetPassword";

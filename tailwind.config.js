@@ -16,7 +16,8 @@ module.exports = {
       green: "#11CA92",
       inputbg: "rgba(255, 255, 255, .2)",
       tercary: "#626262",
-      gray: "#C4C4C4"
+      gray: "#C4C4C4",
+      cardBg: "#F4F4F4"
     },
     extend: {},
   },

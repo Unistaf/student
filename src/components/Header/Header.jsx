@@ -3,11 +3,13 @@ import React from "react"
 
 import HeaderItem from "./HeaderItem"
 import BlackLogo from "components/Logo/BlackLogo"
-import { DIPLOME_PATH, ECOLES_PATH } from "routes/navigation/navigationPaths"
+import { DIPLOME_PATH, ECOLES_PATH, TROUVER_FORMATION_PATH } from "routes/navigation/navigationPaths"
 import Button from "components/Button"
 import { MdOutlineSchool } from "react-icons/md"
+import { useNavigate } from "react-router-dom"
 
 const Header = () => {
+    const navigate = useNavigate()
     return (
         <header className="bg-white sticky top-0 z-10 shadow-md">
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -28,6 +30,7 @@ const Header = () => {
 
                     <div className="flex items-center gap-4">
                         <Button
+                            onClick={() => navigate(TROUVER_FORMATION_PATH)}
                             icon={{
                                 name: MdOutlineSchool,
                                 color: "rgba(17, 17, 167)",

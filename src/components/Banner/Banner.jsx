@@ -3,8 +3,10 @@ import React from "react"
 
 import { MdOutlineSchool } from "react-icons/md";
 import imgBanner from "assets/imgs/hero-img.png"
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+    const navigate = useNavigate()
     return (
         <section className="h-[500px] bg-blue md:grid md:grid-cols-2 md:items-start gap-10 px-8 py-10 md:px-12 md:py-3 lg:px-16 lg:py-12">
             <div className="">
@@ -19,6 +21,7 @@ const Banner = () => {
 
                     <div className="flex flex-wrap gap-3 mt-10">
                         <Button
+                            onClick={() => navigate(TROUVER_FORMATION_PATH)}
                             className="bg-white text-blueSecondary text-center h-11 px-10"
                             title={"Trouver une formation"}
                             icon={{

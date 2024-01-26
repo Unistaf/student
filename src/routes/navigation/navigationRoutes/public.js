@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import ErrorBoundary from "components/ErrorBoundary/ErrorBoundary";
-import { DIPLOME_PATH, ECOLES_DETAILS_PATH, ECOLES_PATH, LOGIN_PATH, PUBLIC_PATH, REGISTER_PATH } from "../navigationPaths";
+import { DIPLOME_PATH, ECOLES_DETAILS_PATH, ECOLES_PATH, LOGIN_PATH, PUBLIC_PATH, REGISTER_PATH, TROUVER_FORMATION_PATH } from "../navigationPaths";
 import WithoutAuth from "layouts/WithoutAuth";
 import PublicHomePage from "pages/public/HomePage/PublicHomePage";
 import EcolePage from "pages/public/Ecoles/EcolePage";
@@ -9,6 +9,7 @@ import Footer from "components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 import DiplomePage from "pages/public/Diplomes/DiplomePage";
 import EcoleDetailsPage from "pages/public/Ecoles/Details/EcoleDetailsPage";
+import TrouverFormation from "pages/public/TrouverFormation/TrouverFormation";
 
 /*
 |---------------------------------------------------------------
@@ -56,6 +57,10 @@ export const publicRoutes = [
                         breadcrumb: "Diplômes",
                         path: DIPLOME_PATH,
                         element: <DiplomePage />
+                    },
+                    {
+                        path: TROUVER_FORMATION_PATH,
+                        element: <TrouverFormation />
                     }
                 ]
             },
