@@ -10,7 +10,6 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
   }
   const nextStep = () => {
     setCurrentIndex((prev) => prev + 1)
-    setProgressBar((currentIndex / children.length) * 100)
   }
   const contextValue = useMemo(() => {
     return {
@@ -23,7 +22,6 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
     setProgressBar((currentIndex / children.length) * 100)
   }, [currentIndex])
 
-  console.log({ progressBar, currentIndex });
   return (
     <TrouverMaFormationeContexte.Provider value={contextValue}>
       <div className="h-[4px] w-full bg-gray mb-6 rounded-md">

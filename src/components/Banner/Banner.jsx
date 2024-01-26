@@ -1,9 +1,10 @@
-import Button from "components/Button"
 import React from "react"
-
-import { MdOutlineSchool } from "react-icons/md";
-import imgBanner from "assets/imgs/hero-img.png"
 import { useNavigate } from "react-router-dom";
+import { MdOutlineSchool } from "react-icons/md";
+
+import Button from "components/Button"
+import imgBanner from "assets/imgs/hero-img.png"
+import { TROUVER_FORMATION_PATH } from "routes/navigation/navigationPaths";
 
 const Banner = () => {
     const navigate = useNavigate()
