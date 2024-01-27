@@ -1,16 +1,13 @@
 import AppMaxWidth from "components/AppMaxWidth/AppMaxWidth"
 import PublicBreadcrumps from "components/Breadcrumps/PublicBreadcrumps"
 import Button from "components/Button"
-import EcoleCardItem from "components/Ecoles/EcoleCardItem"
+import ListeEcoles from "components/Ecoles/ListeEcoles"
 import Input from "components/Input"
 import Select from "components/Select"
 import React from "react"
-import GridList from "react-flexible-list"
 import { HiSearch } from "react-icons/hi"
-import { useNavigate } from "react-router-dom"
 
 const EcolePage = () => {
-    const navigate = useNavigate()
     return (
         <div>
             <div className="bg-blue">
@@ -56,11 +53,7 @@ const EcolePage = () => {
                     </form>
                 </div>
                 <div className="mt-10">
-                    <GridList
-                        resourceData={[1, 2, 3, 4, 5, 6, 7]}
-                        resourceItem={(item) => <EcoleCardItem onClick={() => navigate("Bakeli")} />}
-                        cardWidth={400}
-                    />
+                    <ListeEcoles />
                 </div>
             </AppMaxWidth>
         </div>
