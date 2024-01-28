@@ -2,7 +2,7 @@ import { useTrouverMaFormationeContexte } from "context/TrouverMaFormationeConte
 import React from "react"
 import { twMerge } from "tailwind-merge"
 
-const TrouverFormationCard = ({ content, customClass, onClickCard }) => {
+const TrouverFormationCard = ({ content, customClass, onClickCard, active }) => {
     const { nextStep } = useTrouverMaFormationeContexte()
     return (
         <div
@@ -10,7 +10,8 @@ const TrouverFormationCard = ({ content, customClass, onClickCard }) => {
                 onClickCard()
                 nextStep()
             }}
-            className={twMerge(["p-3 flex flex-col gap-3 justify-center items-center rounded-md bg-cardBg hover:shadow-lg cursor-pointer active:scale-95"], customClass)}
+            // eslint-disable-next-line max-len
+            className={twMerge([`p-3 flex flex-col gap-3 justify-center items-center rounded-m hover:shadow-lg cursor-pointer ${active ? "bg-blue text-white" : "bg-cardBg"} active:scale-95`], customClass)}
         >
             {content()}
         </div>

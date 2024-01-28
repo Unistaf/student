@@ -14,8 +14,6 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
   })
   const [labels, setLabels] = useState([])
 
-  console.log({ userFormationChoice, labels });
-
   const previousStep = () => {
     setCurrentIndex((prev) => prev - 1)
   }
@@ -25,7 +23,7 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
   }
 
   const setDomaineChoice = (domaine) => {
-    setLabels((prev) => [...prev, domaine.label])
+    setLabels((prev) => [...prev, domaine])
     setUserFormationChoice((prevState) => ({
       ...prevState,
       selectedDomaine: domaine
@@ -33,7 +31,7 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
   }
 
   const setFiliereChoice = (filiere) => {
-    setLabels((prev) => [...prev, filiere.label])
+    setLabels((prev) => [...prev, filiere])
     setUserFormationChoice((prevState) => ({
       ...prevState,
       selectedFiliere: filiere
@@ -41,14 +39,14 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
   }
 
   const setDiplomeChoice = (diplome) => {
-    setLabels((prev) => [...prev, diplome.label])
+    setLabels((prev) => [...prev, diplome])
     setUserFormationChoice((prevState) => ({
       ...prevState,
       selectedDiplome: diplome
     }))
   }
   const setLieuFormationChoice = (lieu) => {
-    setLabels((prev) => [...prev, lieu.label])
+    setLabels((prev) => [...prev, lieu])
     setUserFormationChoice((prevState) => ({
       ...prevState,
       selectedLieuFormation: lieu
@@ -57,6 +55,7 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
 
   const contextValue = useMemo(() => {
     return {
+      userFormationChoice,
       previousStep,
       nextStep,
       setDomaineChoice,
@@ -68,6 +67,18 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
 
   useEffect(() => {
     setProgressBar((currentIndex / (children.length - 1)) * 100)
+    // console.log("effect index ", currentIndex);
+    const newLabels = [...labels]
+    console.log(newLabels.length, currentIndex);
+    if (currentIndex === 0) {
+      return setLabels(newLabels)
+    }
+    if (newLabels.length - currentIndex === 1) {
+      newLabels.pop()
+      setLabels(newLabels)
+      return
+    }
+    setLabels(newLabels)
   }, [currentIndex])
 
   return (
@@ -88,12 +99,9 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
       </div>
       <div className="mb-5">
         {
-          currentIndex > 0 ? [
-            userFormationChoice.selectedDomaine.label,
-            userFormationChoice.selectedFiliere.label,
-            userFormationChoice.selectedDiplome.label,
-            userFormationChoice.selectedLieuFormation.label
-          ].map((label, index) => (label !== "" && index > 0) ? <span key={index}> - {label}</span> : <span key={index}>{label}</span>) : null
+          labels.map(({ label }, index) => (label !== "" && index > 0) ?
+            <span key={index}> - {label}</span> :
+            <span key={index}>{label}</span>)
         }
       </div>
 

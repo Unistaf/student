@@ -6,8 +6,10 @@ import TrouverFormationCard from "./TrouverFormationCard"
 import { useTrouverMaFormationeContexte } from "context/TrouverMaFormationeContexteProvider"
 
 const FiliereChoixCardItem = ({ filiere }) => {
-    const { setFiliereChoice } = useTrouverMaFormationeContexte()
+    const { setFiliereChoice, userFormationChoice } = useTrouverMaFormationeContexte()
+    // console.log({ selectedFiliere: userFormationChoice.selectedFiliere, filiere });
     return <TrouverFormationCard
+        active={userFormationChoice.selectedFiliere === filiere.id}
         onClickCard={() => setFiliereChoice(filiere)}
         content={() => <span className="font-semibold text-center">{filiere.label}</span>}
     />
