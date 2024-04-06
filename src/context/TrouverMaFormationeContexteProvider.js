@@ -15,6 +15,11 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
   const [labels, setLabels] = useState([])
 
   const previousStep = () => {
+    const copyLabels = [...labels]
+    if (copyLabels.length > 1) {
+      copyLabels.pop()
+    }
+    setLabels(copyLabels)
     setCurrentIndex((prev) => prev - 1)
   }
 
@@ -23,7 +28,12 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
   }
 
   const setDomaineChoice = (domaine) => {
-    setLabels((prev) => [...prev, domaine])
+    const copyLabels = [...labels]
+    if (copyLabels.length === 1) {
+      setLabels((prev) => [domaine])
+    } else {
+      setLabels((prev) => [...prev, domaine])
+    }
     setUserFormationChoice((prevState) => ({
       ...prevState,
       selectedDomaine: domaine
@@ -67,18 +77,7 @@ const TrouverMaFormationeContexteProvider = ({ children }) => {
 
   useEffect(() => {
     setProgressBar((currentIndex / (children.length - 1)) * 100)
-    // console.log("effect index ", currentIndex);
-    const newLabels = [...labels]
-    console.log(newLabels.length, currentIndex);
-    if (currentIndex === 0) {
-      return setLabels(newLabels)
-    }
-    if (newLabels.length - currentIndex === 1) {
-      newLabels.pop()
-      setLabels(newLabels)
-      return
-    }
-    setLabels(newLabels)
+    console.log({ labels });
   }, [currentIndex])
 
   return (

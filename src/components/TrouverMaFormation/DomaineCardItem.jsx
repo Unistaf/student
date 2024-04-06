@@ -5,7 +5,10 @@ import TrouverFormationCard from "./TrouverFormationCard";
 
 const DomaineCardItem = ({ domaine }) => {
     const { nextStep, setDomaineChoice, userFormationChoice } = useTrouverMaFormationeContexte()
-    // console.log({ selectedDomaine: userFormationChoice.selectedDomaine, domaine });
+    console.log({ selectedDomaine: userFormationChoice.selectedDomaine });
+    // if (userFormationChoice.selectedDomaine.id === domaine.id) {
+    //     console.log({ selectedDomaine: userFormationChoice.selectedDomaine, domaine });
+    // }
     return (
         <TrouverFormationCard
             active={userFormationChoice.selectedDomaine.id === domaine.id}

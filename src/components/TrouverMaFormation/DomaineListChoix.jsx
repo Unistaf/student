@@ -1,4 +1,4 @@
-import React, { memo } from "react"
+import React from "react"
 import QuestionTitle from "./QuestionTitle"
 import GridList from "react-flexible-list"
 import DomaineCardItem from "./DomaineCardItem"
@@ -17,4 +17,4 @@ const DomaineListChoix = () => {
     )
 }
 
-export default memo(DomaineListChoix)
+export default DomaineListChoix
