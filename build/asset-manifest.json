@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cfc7ac65.css",
+    "main.js": "/static/js/main.cba04259.js",
+    "static/js/787.3b1c4f30.chunk.js": "/static/js/787.3b1c4f30.chunk.js",
+    "static/media/ecoleDetails.png": "/static/media/ecoleDetails.84f56c330143f2d962ce.png",
+    "static/media/preparez-vous.png": "/static/media/preparez-vous.7cec928d82aa07dd5859.png",
+    "static/media/hero-img.png": "/static/media/hero-img.ee2c5c0b3cda62447466.png",
+    "index.html": "/index.html",
+    "main.cfc7ac65.css.map": "/static/css/main.cfc7ac65.css.map",
+    "main.cba04259.js.map": "/static/js/main.cba04259.js.map",
+    "787.3b1c4f30.chunk.js.map": "/static/js/787.3b1c4f30.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfc7ac65.css",
+    "static/js/main.cba04259.js"
+  ]
+}
