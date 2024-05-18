@@ -25,12 +25,12 @@ const DiplomeCardItem = ({ isImage }) => {
             <div className="flex flex-col flex-1 justify-between p-4 leading-normal">
                 <div className="flex items-center gap-3">
                     <h5
-                        className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        className="mb-2 text-xl font-bold tracking-tight text-gray-900">
                         Licence informatique et gestion
                     </h5>
-                    {
+                    {/* {
                         isImage && <span className="text-tercary font-semibold"> - UNISTAF</span>
-                    }
+                    } */}
                 </div>
                 <div className="flex flex-col gap-2 py-3 md:flex-row md:gap-10">
                     <DiplomeSpec label={"Domaine"} desc={"Sciences politiques"} />
@@ -51,7 +51,8 @@ const DiplomeCardItem = ({ isImage }) => {
                             className={"bg-blueRgba text-blue text-xs"}
                             icon={{
                                 name: HiLocationMarker,
-                                size: 15
+                                size: 15,
+                                color: "red"
                             }}
                             label={"Dakar"}
                         />

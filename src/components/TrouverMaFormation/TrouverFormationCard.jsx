@@ -11,7 +11,7 @@ const TrouverFormationCard = ({ content, customClass, onClickCard, active }) => 
                 nextStep()
             }}
             // eslint-disable-next-line max-len
-            className={twMerge([`p-3 flex flex-col gap-3 justify-center items-center rounded-m hover:shadow-lg cursor-pointer ${active ? "bg-blue text-white" : "bg-cardBg"} active:scale-95`], customClass)}
+            className={twMerge([`p-3 flex flex-col gap-3 justify-center items-center rounded-2xl hover:shadow-md cursor-pointer transition-all ${active ? "bg-blue text-white" : "bg-cardBg"} active:scale-95`], customClass)}
         >
             {content()}
         </div>

@@ -8,6 +8,7 @@ import { useTrouverMaFormationeContexte } from "context/TrouverMaFormationeConte
 const LieuFormationChoixCardItem = ({ lieu }) => {
     const { setLieuFormationChoice } = useTrouverMaFormationeContexte()
     return <TrouverFormationCard
+        customClass={"rounded-full"}
         onClickCard={() => setLieuFormationChoice(lieu)}
         content={() => <span className="font-semibold text-center">{lieu.label}</span>}
     />

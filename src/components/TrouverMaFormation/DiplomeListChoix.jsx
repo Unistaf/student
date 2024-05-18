@@ -8,6 +8,7 @@ import { useTrouverMaFormationeContexte } from "context/TrouverMaFormationeConte
 const DiplomeChoixCardItem = ({ diplome }) => {
     const { setDiplomeChoice } = useTrouverMaFormationeContexte()
     return <TrouverFormationCard
+        customClass={"rounded-full"}
         onClickCard={() => setDiplomeChoice(diplome)}
         content={() => <span className="font-semibold text-center">{diplome.label}</span>}
     />
