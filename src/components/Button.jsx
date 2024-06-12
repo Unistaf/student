@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 // eslint-disable-next-line valid-jsdoc
 /**
  *
- * @param {{title: String | Number, onChange: Function, errorMessage: String, Icon: {name: String, color: String, size: Number}}} param0
+ * @param {{title: String | Number, onClick: Function, errorMessage: String, Icon: {name: String, color: String, size: Number}}} param0
  * @returns
  */
 function Button({
@@ -47,7 +47,7 @@ function Button({
               size={icon?.size ?? 15}
             />
           )}
-          <div
+            <span
               style={{
               marginLeft: 7,
               marginRight: 7,
@@ -55,7 +55,7 @@ function Button({
             }}
           >
             {title}
-          </div>
+            </span>
             {icon?.name && icon.position === "right" && (
             <icon.name
               color={icon?.color ?? color ?? "gray"}

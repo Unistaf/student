@@ -6,13 +6,13 @@ import BadgeIcon from "components/Badge/BadgeIcon";
 import { HiLocationMarker } from "react-icons/hi";
 import Button from "components/Button";
 
-const DiplomeSpec = ({ label, desc }) => {
+export const DiplomeSpec = ({ label, desc }) => {
     return <p className="d-flex text-sm">
-        <span className="text-tercary">{label} : </span> <span className="font-bold">{desc}</span>
+        <span className="text-tercary text-[15px] font-[600]">{label} : </span> <span className="font-bold">{desc}</span>
     </p>
 }
 
-const DiplomeCardItem = ({ isImage }) => {
+const DiplomeCardItem = ({ isImage, onClick }) => {
     return (
         <div className="flex flex-col flex-1 min-w-[320px] gap-5 shadow-xl items-cente bg-white rounded-lg md:flex-row hover:bg-gray-100 px-5">
             {
@@ -57,7 +57,7 @@ const DiplomeCardItem = ({ isImage }) => {
                             label={"Dakar"}
                         />
                     </div>
-                    <Button className={"border border-blueSecondary text-blue h-9 text-sm"} title={"Candidater"} />
+                    <Button onClick={onClick} className={"border border-blueSecondary text-blue h-9 text-sm"} title={"Candidater"} />
                 </div>
             </div>
         </div>
