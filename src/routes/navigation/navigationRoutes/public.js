@@ -10,6 +10,7 @@ import { Outlet } from "react-router-dom";
 import DiplomePage from "pages/public/Diplomes/DiplomePage";
 import EcoleDetailsPage from "pages/public/Ecoles/Details/EcoleDetailsPage";
 import TrouverFormation from "pages/public/TrouverFormation/TrouverFormation";
+import ConnexionPage from "pages/public/Connexion/ConnexionPage";
 
 /*
 |---------------------------------------------------------------
@@ -66,7 +67,7 @@ export const publicRoutes = [
             },
             {
                 path: LOGIN_PATH,
-                element: <p>Hello from login</p>,
+                element: <ConnexionPage />,
             },
             {
                 path: REGISTER_PATH,

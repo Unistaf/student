@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import { MdOutlineSchool } from "react-icons/md"
 import { HiLocationMarker } from "react-icons/hi"
@@ -10,6 +10,7 @@ import blackLogo from "assets/logos/unistaf-black-logo.png"
 import { DiplomeSpec } from "components/Diplomes/DiplomeCardItem"
 import BadgeIcon from "components/Badge/BadgeIcon"
 import Button from "components/Button"
+import { LOGIN_PATH } from "routes/navigation/navigationPaths"
 
 const FormationTitle = styled.h3`
   font-size: 25px;
@@ -36,6 +37,7 @@ const Logo = () => {
 }
 
 const FormationDetailsModal = ({ openModal, closeModal }) => {
+  const navigate = useNavigate();
   return (
     <Modal title={"Détails sur la formation"} opened={openModal} onClosed={closeModal}>
       <div className="flex items-center gap-10">
@@ -93,7 +95,7 @@ const FormationDetailsModal = ({ openModal, closeModal }) => {
         </div>
       </div>
       <div className="flex justify-center items-center gap-3 mt-4">
-        <Button title={"Candidater"} className="bg-blue text-white px-4 py-2 flex-1" />
+        <Button onClick={() => navigate("/" + LOGIN_PATH)} title={"Candidater"} className="bg-blue text-white px-4 py-2 flex-1" />
         <Button title={"Voir l’etablissement"} className="flex-1 border px-4 py-2" />
         {/* <div className="flex-1">
         </div>

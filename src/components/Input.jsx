@@ -55,7 +55,7 @@ function Input({
 }) {
   return (
     <Label className={twMerge([inputContainerClass])}>
-      <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{label}</label>
+      <label htmlFor="countries" className="block mb-1 text-md font-medium text-dark">{label}</label>
       <IconContainer>
         {icon && (
           <icon.name
@@ -66,7 +66,7 @@ function Input({
         )}
       </IconContainer>
       <InputForm
-        className={twMerge(["border px-4 border-gray-300 h-11 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block min-w-max", extraClasse])}
+        className={twMerge(["border px-4 border-gray-300 h-11 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block min-w-max", extraClasse])}
         placeholder={placeholder}
         type={type ?? "text"}
         value={value}

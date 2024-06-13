@@ -48,6 +48,7 @@ function Button({
             />
           )}
             <span
+              className="font-semibold"
               style={{
               marginLeft: 7,
               marginRight: 7,
