@@ -23,7 +23,7 @@ export const RESETPASSWORD = "/aut/resetPassword";
  * ! PROTECTED ROUTES
  */
 export const ACCEUIL_PATH = "/";
-export const PRODUCTS_PATH = "products";
+export const MES_CANDIDATURES_PATH = "mes-candidatures";
 
 /**
  * @readonly

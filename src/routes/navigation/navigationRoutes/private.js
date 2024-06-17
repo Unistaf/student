@@ -1,10 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
 import HomePage from "pages/private/Home/HomePage";
-import { ACCEUIL_PATH, PRODUCTS_PATH } from "../navigationPaths";
+import { ACCEUIL_PATH, MES_CANDIDATURES_PATH } from "../navigationPaths";
 import RequireAuth from "layouts/RequireAuth";
 import ErrorBoundary from "components/ErrorBoundary/ErrorBoundary";
 import { Navigate } from "react-router-dom";
 import SplitShell from "layouts/AppShells/SplitShell";
+import CandidaterPage from "pages/private/Candidatures/CandidaterPage";
 
 /*
 |---------------------------------------------------------------
@@ -32,8 +33,8 @@ export const privateRoutes = [
                         element: <HomePage />
                     },
                     {
-                        path: PRODUCTS_PATH,
-                        element: <p>Hello from me</p>
+                        path: MES_CANDIDATURES_PATH,
+                        element: <CandidaterPage />
                     },
                 ]
             }

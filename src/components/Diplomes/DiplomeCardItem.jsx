@@ -57,7 +57,12 @@ const DiplomeCardItem = ({ isImage, onClick }) => {
                             label={"Dakar"}
                         />
                     </div>
-                    <Button onClick={onClick} className={"border border-blueSecondary text-blue h-9 text-sm"} title={"Candidater"} />
+                    {
+                        onClick && <Button
+                            onClick={onClick}
+                            className={"border border-blueSecondary text-blue h-9 text-sm"}
+                            title={"Candidater"} />
+                    }
                 </div>
             </div>
         </div>

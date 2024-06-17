@@ -4,7 +4,7 @@
  * @return {true|false}
  */
 function useIsAuthenticate() {
-    const isAuthenticate = false;
+    const isAuthenticate = true;
 
     return isAuthenticate;
 }

@@ -1,4 +1,4 @@
-import { ACCEUIL_PATH, PRODUCTS_PATH } from "./navigationPaths";
+import { ACCEUIL_PATH, MES_CANDIDATURES_PATH } from "./navigationPaths";
 import { HiHome } from "react-icons/hi";
 
 /*
@@ -11,5 +11,5 @@ import { HiHome } from "react-icons/hi";
 */
 export const links = [
     { path: ACCEUIL_PATH, icon: HiHome, label: "Acceuil" },
-    { path: PRODUCTS_PATH, icon: HiHome, label: "Produits" },
+    { path: MES_CANDIDATURES_PATH, icon: HiHome, label: "Mes candidatures" },
 ]
