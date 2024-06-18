@@ -9,6 +9,7 @@ import { twMerge } from "tailwind-merge";
  *  {
  *    type: String,
  *    name: String,
+ *    inputContainerClass: String,
  *    value: String | Number,
  *    onChange: Function,
  *    label: String,
@@ -66,7 +67,7 @@ function Input({
         )}
       </IconContainer>
       <InputForm
-        className={twMerge(["border px-4 border-gray-300 h-11 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block min-w-max", extraClasse])}
+        className={twMerge(["border px-4 border-gray-300 h-14 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block min-w-max", extraClasse])}
         placeholder={placeholder}
         type={type ?? "text"}
         value={value}

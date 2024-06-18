@@ -1,3 +1,4 @@
+import CandidaterSteps from "components/Candidatures/Multistep/CandidaterSteps"
 import DiplomeCardItem from "components/Diplomes/DiplomeCardItem"
 import React from "react"
 
@@ -35,6 +36,7 @@ const CandidaterPage = () => {
           </div>
         </div>
       </div>
+      <CandidaterSteps />
     </div>
   )
 }

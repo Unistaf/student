@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 // eslint-disable-next-line valid-jsdoc
 /**
  *
- * @param {{title: String | Number, onClick: Function, errorMessage: String, Icon: {name: String, color: String, size: Number}}} param0
+ * @param {{title: String | Number, loading:Boolean,className: String,disabled: Boolean, onClick: Function, errorMessage: String, Icon: {name: String, color: String, size: Number}}} param0
  * @returns
  */
 function Button({
@@ -18,8 +18,11 @@ function Button({
   height,
   radius,
   loading,
+  disabled,
   className
 }) {
+  const classNameCheck = `flex items-center justify-center rounded-full transition-all px-3 font-medium w-max ${disabled ? "opacity-50 cursor-not-allowed" : "active:scale-95 cursor-pointer"}`
+  console.log(title, disabled);
   return (
     <button
       style={{
@@ -27,14 +30,13 @@ function Button({
         // width: "100%",
         // backgroundColor: bgColor ?? "#fff",
         overflow: "hidden",
-        cursor: "pointer",
         // color: color ?? "black",
         // borderRadius: radius ?? 5,
         ...style,
       }}
       onClick={onClick}
-      disabled={loading}
-      className={twMerge(["flex items-center justify-center rounded-full active:scale-95 transition-all px-3 font-medium w-max", className])}
+      disabled={loading || disabled}
+      className={twMerge([classNameCheck, className])}
     >
       {loading ? (
         <div>loading...</div>
