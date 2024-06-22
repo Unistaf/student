@@ -7,10 +7,12 @@ const LinkItem = styled(NavLink)`
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  padding: 7px 3px;
   margin-bottom: 13px;
-  height: 35px;
   overflow: hidden;
-  textdecoration: none;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
   color: ${({ color }) => color};
   &:hover {
     color: ${({ coloronhover }) => coloronhover};

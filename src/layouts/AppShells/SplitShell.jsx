@@ -24,7 +24,7 @@ const SplitShell = () => {
                 linkColor="black"
                 colorOnHover={"black"}
             />
-            <div className="pb-4">
+            <div className="py-5">
                 <Outlet />
             </div>
         </SpliTemplateScreen>

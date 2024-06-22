@@ -10,6 +10,6 @@ import { HiHome } from "react-icons/hi";
 | de SplitShell
 */
 export const links = [
-    { path: ACCEUIL_PATH, icon: HiHome, label: "Acceuil" },
+    { path: ACCEUIL_PATH, icon: HiHome, label: "Mon profil" },
     { path: MES_CANDIDATURES_PATH, icon: HiHome, label: "Mes candidatures" },
 ]

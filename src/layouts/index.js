@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRef } from "react";
 import { useMemo } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+// import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import useWindowDimensions from "../hooks/useWindowsDimention";
 import styled from "styled-components";
 
@@ -29,30 +29,31 @@ const SidebarPaner = styled.div`
   position: fixed;
   top: 50px;
   left: 0%;
-  background-color: #fff;
+  background-color: #F6F6F7;
   transition: width 0.3s;
   z-index: 2;
 `;
-const MenuController = styled.div`
-  position: absolute;
-  top: 5px;
-  right: -10px;
-  width: 25px;
-  height: 25px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #008fa0;
-  cursor: pointer;
-  z-index: 3;
-`;
+// const MenuController = styled.div`
+//   position: absolute;
+//   top: 5px;
+//   right: -10px;
+//   width: 25px;
+//   height: 25px;
+//   background-color: #fff;
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border: 2px solid #008fa0;
+//   cursor: pointer;
+//   z-index: 3;
+// `;
 const ContaintOutlet = styled.div`
   width: 100%;
   height: 100vh;
   // background-color: red;
-  background-color: rgba(241, 241, 241, 0.624);
+  background-color: #FFFFFF;
+  // background-color: rgba(241, 241, 241, 0.624);
   transition: padding 0.3s;
   overflow-x: hidden;
   z-index: 1;
@@ -62,6 +63,14 @@ const ContaintOutlet = styled.div`
     minViewPort ?
       "70px 10px 0 70px" :
       "70px 10px 0 270px"};
+
+  animation-name: render;
+  animation-duration: 500ms;
+
+  @keyframes render {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
 `;
 
 const SpliTemplateScreen = ({ children }) => {
@@ -73,9 +82,9 @@ const SpliTemplateScreen = ({ children }) => {
   const sidebarRef = useRef(null);
 
   const { width } = useWindowDimensions();
-  const handleResize = () => {
-    setOpenedMenu((v) => !v);
-  };
+  // const handleResize = () => {
+  //   setOpenedMenu((v) => !v);
+  // };
 
   useMemo(() => {
     if (width <= 900) {
@@ -92,13 +101,13 @@ const SpliTemplateScreen = ({ children }) => {
       <NavbarPaner>{navbar}</NavbarPaner>
       <BodyContainer>
         <SidebarPaner openedMenu={openedMenu} ref={sidebarRef}>
-          <MenuController onClick={handleResize}>
+          {/* <MenuController onClick={handleResize}>
             {openedMenu ? (
               <AiOutlineArrowRight className="menu-controller-icon" />
             ) : (
               <AiOutlineArrowLeft className="menu-controller-icon" />
             )}
-          </MenuController>
+          </MenuController> */}
           {sidebar}
         </SidebarPaner>
         <ContaintOutlet openedMenu={openedMenu} minViewPort={minViewPort}>
